@@ -60,5 +60,15 @@ B7 00                          # e_machine Indicating 64bit AARCH64
 02 00                          # e_shstrndx index of the section names
 
 
+:ELF_program_headers
+:ELF_program_header__text
+01 00 00 00                    # ph_type: PT-LOAD = 1
+00 00 00 00                    # ph_offset
+&ELF_base                      # ph_vaddr
+&ELF_base                      # ph_physaddr
+%ELF_end>ELF_base              # ph_filesz
+%ELF_end>ELF_base              # ph_memsz
+07 00 00 00                    # ph_flags: PF-X|PF-W|PF-R = 7
+00 00 01 00                    # ph_alignment
 
 :ELF_text

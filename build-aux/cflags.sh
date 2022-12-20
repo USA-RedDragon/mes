@@ -17,6 +17,9 @@
 # along with GNU Mes.  If not, see <http://www.gnu.org/licenses/>.
 
 case "$mes_cpu" in
+    aarch64)
+        stage0_arch=80
+        stage0_cpu=aarch64
     arm)
         stage0_arch=40
         stage0_cpu=armv7l

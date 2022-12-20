@@ -1,0 +1,53 @@
+### GNU Mes --- Maxwell Equations of Software
+### Copyright © 2017,2018,2020,2022 Jan (janneke) Nieuwenhuizen <janneke@gnu.org>
+### Copyright © 2019,2020 Danny Milosavljevic <dannym@scratchpost.org>
+###
+### This file is part of GNU Mes.
+###
+### Mes is free software# you can redistribute it and/or modify it
+### under the terms of the GNU General Public License as published by
+### the Free Software Foundation# either version 3 of the License, or (at
+### your option) any later version.
+###
+### GNU Mes is distributed in the hope that it will be useful, but
+### WITHOUT ANY WARRANTY# without even the implied warranty of
+### MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+### GNU General Public License for more details.
+###
+### You should have received a copy of the GNU General Public License
+### along with GNU Mes.  If not, see <http://www.gnu.org/licenses/>.
+
+# See: https://github.com/torvalds/linux/blob/v4.19/arch/arm/tools/syscall.tbl
+DEFINE SYS_exit   5d
+DEFINE SYS_fork   02
+DEFINE SYS_read   03
+DEFINE SYS_write  40
+DEFINE SYS_open   05
+DEFINE SYS_close  39
+# DEFINE SYS_rmdir does_not_exist
+DEFINE SYS_wait4  104
+# DEFINE SYS_waitpid does_not_exist
+
+# DEFINE SYS_unlink does_not_exist
+DEFINE SYS_unlinkat 23
+DEFINE SYS_execve dd
+# DEFINE SYS_chmod does_not_exist
+DEFINE SYS_fchmodat  35
+DEFINE SYS_lseek  3e
+# DEFINE SYS_access does_not_exist
+DEFINE SYS_faccessat 30
+DEFINE SYS_brk    d6
+DEFINE SYS_ioctl  1d
+# DEFINE SYS_stat does_not_exist
+DEFINE SYS_fstat  50
+DEFINE SYS_fsync  52
+DEFINE SYS_getcwd 11
+
+DEFINE svc____#0 010000d4
+DEFINE mov____x8,x0 e80300aa
+DEFINE mov____x0,x1 e00301aa
+DEFINE mov____x1,x2 e10302aa
+DEFINE mov____x2,x3 e20303aa
+DEFINE mov____x3,x4 e30304aa
+DEFINE mov____x4,x5 e40305aa
+DEFINE mov____x5,x6 e50306aa

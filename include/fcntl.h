@@ -39,6 +39,11 @@
 #define O_TRUNC       0x200
 #define O_APPEND      0x400
 
+/*  Special value used to indicate
+    openat should use the current
+    working directory. */
+#define AT_FDCWD      -100
+
 #ifdef __arm__
 #define O_DIRECTORY 0x4000
 /*#define O_DIRECT 0x10000*/
